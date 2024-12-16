@@ -1,6 +1,7 @@
 const slides = document.querySelectorAll(".slide");
 const next = document.querySelector(".next") ;
 const previous = document.querySelector(".previous") ;
+const backBtn = document.querySelector(".back");
 
 // console.log(slides);
 var counter=0 ;
@@ -34,6 +35,11 @@ const slideImage = () => {
     )  
 }
 
-
+backBtn.addEventListener("click", function() {
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth" // Smooth scroll
+      });
+    });
 
 
